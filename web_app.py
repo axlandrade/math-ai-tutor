@@ -1,17 +1,5 @@
 # app/web_app.py
 
-import sys, os
-
-# Caminho do diretório atual (app/)
-CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
-
-# Caminho da raiz do projeto
-ROOT_DIR = os.path.dirname(CURRENT_DIR)
-
-# Adiciona raiz ao PYTHONPATH
-if ROOT_DIR not in sys.path:
-    sys.path.insert(0, ROOT_DIR)
-
 import streamlit as st
 
 from core import get_client, chat_with_memory     # CORRIGIDO

@@ -1,17 +1,5 @@
 # app/core.py
 
-import sys, os
-
-# Caminho do diretório atual (app/)
-CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
-
-# Caminho do diretório raiz do projeto
-ROOT_DIR = os.path.dirname(CURRENT_DIR)
-
-# Garantir que o Python consiga importar "app"
-if ROOT_DIR not in sys.path:
-    sys.path.insert(0, ROOT_DIR)
-
 import json
 from datetime import datetime
 from typing import List, Dict
