@@ -20,7 +20,7 @@ def main():
 
     init_session_state()
 
-    st.title("📘 Tutor de Matemática com IA")
+    st.title("Tutor de Matemática com IA")
     st.markdown(
         "Faça perguntas de Matemática. "
         "O tutor responde passo a passo, com foco em entendimento conceitual."
