@@ -4,8 +4,7 @@ import streamlit as st
 
 from core import get_client, chat_with_memory
 from subjects import detect_subject
-
-
+from PIL import Image
 
 def init_session_state():
     if "history" not in st.session_state:
@@ -23,11 +22,13 @@ def main():
 
     init_session_state()
 
-    st.title("Tutor de Matemática com IA")
-    st.markdown(
-        "Faça perguntas de Matemática. "
-        "O tutor responde passo a passo, com foco em entendimento conceitual."
-    )
+    col1, col2 = st.columns([1, 4])
+    with col1:
+        st.image(logo, width=100)
+    with col2:
+        st.title("Math & Physics AI Tutor")
+        st.write("Desenvolvido por **Axl Andrade**")
+
 
     with st.sidebar:
         st.header("Configurações")
