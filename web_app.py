@@ -12,17 +12,6 @@ def init_session_state():
     if "client" not in st.session_state:
         st.session_state.client = get_client()
 
-# Limitar largura do conteúdo e centralizar
-st.markdown("""
-    <style>
-        .main {
-            max-width: 900px;
-            margin: auto;
-            padding-top: 1rem !important;
-        }
-    </style>
-""", unsafe_allow_html=True)
-
 st.set_page_config(
     page_title="Math AI Tutor",
     page_icon="logo.png",
@@ -32,6 +21,17 @@ st.set_page_config(
 def main():
 
     init_session_state()
+
+    # Limitar largura do conteúdo e centralizar
+    st.markdown("""
+        <style>
+            .main {
+                max-width: 900px;
+                margin: auto;
+                padding-top: 1rem !important;
+            }
+        </style>
+    """, unsafe_allow_html=True)
 
     col1, col2 = st.columns([1, 4])
     with col1:
