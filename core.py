@@ -67,7 +67,7 @@ def chat_with_memory(
     messages.append({"role": "user", "content": user_message})
 
     response = client.chat.completions.create(
-        model=MODEL_NAME,
+        model="gpt-4.1-nano",
         messages=messages,
     )
 
