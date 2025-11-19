@@ -3,4 +3,5 @@ app/config.py
 logs/
 __pycache__/
 *.pyc
-app/config.py
+config.py
+config.py.bak
