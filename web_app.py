@@ -2,8 +2,10 @@
 
 import streamlit as st
 
-from core import get_client, chat_with_memory     # CORRIGIDO
-from subjects import detect_subject               # CORRIGIDO
+from core import get_client, chat_with_memory
+from subjects import detect_subject
+
+
 
 def init_session_state():
     if "history" not in st.session_state:
@@ -14,8 +16,9 @@ def init_session_state():
 
 def main():
     st.set_page_config(
-        page_title="Tutor de Matemática e Física",
-        page_icon="📘",
+    page_title="Math AI Tutor",
+    page_icon="logo.png",
+    layout="wide"
     )
 
     init_session_state()
