@@ -15,7 +15,7 @@ def init_session_state():
 st.set_page_config(
     page_title="Math AI Tutor",
     page_icon="logo.png",
-    layout="wide"
+    layout="centered"
     )
 
 def main():
@@ -23,15 +23,19 @@ def main():
     init_session_state()
 
     # Limitar largura do conteúdo e centralizar
-    st.markdown("""
+    st.markdown(
+        """
         <style>
-            .main {
-                max-width: 900px;
-                margin: auto;
-                padding-top: 1rem !important;
-            }
+        /* Container principal do conteúdo */
+        main .block-container {
+            max-width: 900px;
+            padding-top: 1rem;
+            margin: 0 auto;
+        }
         </style>
-    """, unsafe_allow_html=True)
+        """,
+        unsafe_allow_html=True,
+    )
 
     col1, col2 = st.columns([1, 4])
     with col1:
